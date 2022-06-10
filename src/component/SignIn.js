@@ -30,7 +30,9 @@ const SignIn = () => {
   const onSubmit = handleSubmit(async (value) => {
     console.log(value);
     const { email, password } = value;
-    const url = "http://localhost:1400/api/user/signin";
+    online = "https://dairy-backend02.herokuapp.com";
+    local = "http://localhost:1400";
+    const url = `${online}/api/user/signin`;
 
     await axios.post(url, { email, password }).then((res) => {
       // console.log(res.data.data);

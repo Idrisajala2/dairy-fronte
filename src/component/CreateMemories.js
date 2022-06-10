@@ -41,7 +41,7 @@ const CreateMemories = () => {
   const onSubmit = handleSubmit(async (value) => {
     console.log(value);
     const { message, title } = value;
-    const path = "http://localhost:1400";
+    const path = "https://dairy-backend02.herokuapp.com";
     const url = `${path}/api/diary/${id}`;
 
     const formData = new FormData();

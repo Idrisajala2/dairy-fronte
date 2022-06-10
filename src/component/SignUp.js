@@ -6,6 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import pix from "./gg.jpg";
+import { onlineManager } from "react-query";
 // import swal from "sweetalert2";
 
 const SignUp = () => {
@@ -41,7 +42,9 @@ const SignUp = () => {
   const onSubmit = handleSubmit(async (value) => {
     console.log(value);
     const { userName, email, password } = value;
-    const url = "http://localhost:1400/api/user/register";
+    online = "https://dairy-backend02.herokuapp.com";
+    local = "http://localhost:1400";
+    const url = `${online}/api/user/register`;
 
     const formData = new FormData();
     formData.append("userName", userName);
@@ -115,7 +118,7 @@ const SignUp = () => {
               <Error>{errors.message && errors?.message.confirm}</Error>
             </Holder>
 
-            <Button type="submit">Register</Button>
+            <Button type="submit">Register mmnn</Button>
             <Div>
               Already have an Account? <Span to="signin">Sign in Here</Span>
             </Div>

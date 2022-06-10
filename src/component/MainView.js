@@ -17,7 +17,7 @@ const MainView = () => {
 
   const onGetData = async () => {
     try {
-      const mainRoute = "http://localhost:1400";
+      const mainRoute = "https://dairy-backend02.herokuapp.com";
       const url = `${mainRoute}/api/diary/${id}`;
 
       await axios.get(url).then((res) => {
