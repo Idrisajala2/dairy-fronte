@@ -79,6 +79,7 @@ const SignUp = () => {
     //   icon: "success",
     //   button: "success",
     // });
+    consol.log("thid is it");
   });
 
   return (
